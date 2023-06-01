@@ -1,0 +1,10 @@
+include README.md
+include CHANGELOG.md
+include *.sh
+include .gitignore
+global-include requirements.txt
+graft docs
+graft notes
+graft tests
+graft */conf
+graft */log
