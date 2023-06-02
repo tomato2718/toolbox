@@ -5,6 +5,7 @@ import pytest
 
 from toolbox.utils._path_helper import get_abs_path
 from toolbox.utils._reader import ReadFile
+from toolbox.utils._parser import parse_unknown_args
 
 ##### FIXTURES #####
 @pytest.fixture
@@ -23,3 +24,28 @@ class TestReadFile:
     @staticmethod
     def test_yml(yml_path):
         assert isinstance(ReadFile.yml(yml_path), dict or list)
+
+### utils/_parser.py ###
+def test_parse_unknown_args():
+    args = [
+            "test",
+            "--foo",
+            "bar",
+            "-buz",
+            "1",
+            "2",
+            "3",
+            "--sys",
+            "xyz"
+            ]
+    target = {
+              "unnamed": "test",
+              "foo": "bar",
+              "buz": [
+                  "1",
+                  "2",
+                  "3"
+              ],
+              "sys": "xyz"
+              }
+    assert parse_unknown_args(args=args, prefix="-") == target
