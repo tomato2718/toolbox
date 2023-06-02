@@ -1,5 +1,5 @@
 '''
-Not for import, import Global instead
+Not for import, import Global instead.
 '''
 
 __all__ = ['Global']

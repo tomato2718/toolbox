@@ -1,7 +1,12 @@
 '''
 A Package with some useful tools.
 '''
-__all__ = ['LogTool', 'Style', 'Handle', 'Global', 'metaclasses', 'utils']
+__all__ = ['LogTool',
+           'Style',
+           'Handle',
+           'Global',
+           'metaclasses',
+           'utils']
 
 from ._logtool import LogTool
 from ._global import Global

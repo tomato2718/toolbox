@@ -1,5 +1,5 @@
 '''
-Module of exception handling decorators.
+Not for import.
 '''
 
 __all__ = ['Handle']

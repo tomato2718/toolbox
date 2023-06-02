@@ -1,5 +1,5 @@
 '''
-Module to configure logging.
+Not for import.
 '''
 
 __all__ = ['LogTool']
@@ -29,7 +29,7 @@ class LogTool:
     @staticmethod
     def get_logger(target: str) -> logging.Logger:
         '''
-        Wrapper of logging.getLogger().
+        Wrapper of `logging.getLogger()`.
 
         :param str target: Name of the logger
         :return: Requested logger.
@@ -46,7 +46,18 @@ class LogTool:
                     critical: str = '',
                     **kwargs) -> None:
         '''
-        Color your logger.
+        Color your logger, SHOULD be use with `toolbox.Style` together.
+
+        Usage::
+
+            >>> LOGGER_COLOR = {'debug': Style.FG.BRIGHT_CYAN,
+            >>>                 'info':'',
+            >>>                 'warning': Style.FG.YELLOW,
+            >>>                 'error': Style.FG.RED,
+            >>>                 'critical': Style(['BOLD'], 'RED'),
+            >>>                 }
+            >>> LogTool.colorful_logger(__name__, **LOGGER_COLOR)
+            >>> logger = LogTool.get_logger(__name__)
 
         :param str target: The logger you want to color.
         :param str debug: Color of debug level.
@@ -54,7 +65,7 @@ class LogTool:
         :param str warning: Color of warning level.
         :param str error: Color of error level.
         :param str critical: Color of critical level.
-        :param str \*\*kwargs: Color of your custom level.
+        :param str ``**kwargs``: Color of your custom level.
         '''
         logger = logging.getLogger(target)
         end = Style.RESET_ALL

@@ -1,5 +1,5 @@
 '''
-Not for import, import LogTool instead
+Not for import, import LogTool instead.
 '''
 
 from ._logging import LogTool

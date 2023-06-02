@@ -1,5 +1,5 @@
 '''
-Not for import
+Not for import.
 '''
 
 __all__ = ['get_abs_path']

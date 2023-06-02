@@ -1,8 +1,8 @@
 '''
-Not for import
+Not for import.
 '''
 
-__all__ = ['yml']
+__all__ = ['ReadFile']
 
 from typing import Any
 

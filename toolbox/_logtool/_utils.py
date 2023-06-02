@@ -1,3 +1,7 @@
+'''
+Not for import.
+'''
+
 __all__ = ['read_config', 'set_abs_path']
 
 from yaml import safe_load
@@ -18,7 +22,7 @@ def read_config(path: str) -> dict:
 
 def set_abs_path(dic: dict, target: str) -> dict:
     '''
-    Convert all relative path in dict to absolute.
+    Convert all relative path in `dict` to absolute path.
 
     :param dict dic: Target dict.
     :param str target: Target key.

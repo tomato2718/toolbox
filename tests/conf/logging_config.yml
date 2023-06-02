@@ -26,6 +26,3 @@ loggers:
     handlers:
       - console
       - errlog
-    
-
-

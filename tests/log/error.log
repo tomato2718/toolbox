@@ -12,3 +12,24 @@ Traceback (most recent call last):
   File "/Users/yves/Desktop/toolbox/tests/test_handle.py", line 47, in woops
     raise Exception('woops')
 Exception: woops
+[ERROR 2023-06-02 11:55:43] : Exception: woops
+Traceback (most recent call last):
+  File "/Users/yves/Desktop/toolbox/toolbox/_handle/_exception_handler.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yves/Desktop/toolbox/tests/test_handle.py", line 47, in woops
+    raise Exception('woops')
+Exception: woops
+[ERROR 2023-06-02 11:56:39] : Exception: woops
+Traceback (most recent call last):
+  File "/Users/yves/Desktop/toolbox/toolbox/_handle/_exception_handler.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yves/Desktop/toolbox/tests/test_handle.py", line 47, in woops
+    raise Exception('woops')
+Exception: woops
+[ERROR 2023-06-02 12:09:47] : Exception: woops
+Traceback (most recent call last):
+  File "/Users/yves/Desktop/toolbox/toolbox/_handle/_exception_handler.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yves/Desktop/toolbox/tests/test_handle.py", line 47, in woops
+    raise Exception('woops')
+Exception: woops

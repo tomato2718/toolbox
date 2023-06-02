@@ -1,3 +1,9 @@
+'''
+Not for import.
+'''
+
+__all__ = ['ColorfulFormatter']
+
 from logging import Formatter
 
 class ColorfulFormatter(Formatter):

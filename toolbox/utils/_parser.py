@@ -1,11 +1,11 @@
 '''
-Not for import
+Not for import.
 '''
 __all__ = ['parse_unknown_args']
 
 def parse_unknown_args(args: list[str], prefix: str = '-') -> dict:
     '''
-    Parse unknown arguments list into dict. Basically, it's design to parse the return of `ArgumentParser.parse_known_args()`.
+    Parse unknown arguments `list` into `dict`. Basically, it's design to parse the return of `ArgumentParser.parse_known_args()`.
 
     For example, a `list` like::
 

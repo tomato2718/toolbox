@@ -1,5 +1,5 @@
 '''
-Module to store SGR and generate complex SGR.
+Not for import.
 '''
 
 __all__ = ['Style']
@@ -8,7 +8,7 @@ from typing import Any
 
 class StyleMeta(type):
     '''
-    Meta class of Style.*
+    Meta class of Style.*.
     '''
     def __getattribute__(self, __name: str) -> Any:
         res = object.__getattribute__(self, __name)
@@ -31,8 +31,8 @@ class Style:
 
     Usage::
 
-        print(Style.Font.BOLD + 'hello, world!' + Style.RESET_ALL)
-        print(Style(font=['ITALIC', 'STRIKE'], foreground='CYAN', background='RED') + 'hello, world' + Style.RESET_ALL)
+        >>> print(Style.Font.BOLD + 'hello, world!' + Style.RESET_ALL)
+        >>> print(Style(font=['ITALIC', 'STRIKE'], foreground='CYAN', background='RED') + 'hello, world' + Style.RESET_ALL)
     '''
     RESET_ALL = '\033[0m'
     RESET_FG   = '\033[39m'
@@ -86,17 +86,18 @@ class Style:
 
     class FG(metaclass = StyleMeta):
         '''
-        Foreground Colors
+        Foreground Colors.
 
-        Available:
-        - (BRIGHT_)BLACK
-        - (BRIGHT_)RED
-        - (BRIGHT_)GREEN
-        - (BRIGHT_)YELLOW
-        - (BRIGHT_)BLUE
-        - (BRIGHT_)MAGENTA
-        - (BRIGHT_)CYAN
-        - (BRIGHT_)WHITE
+        Members:
+
+            - (BRIGHT_)BLACK
+            - (BRIGHT_)RED
+            - (BRIGHT_)GREEN
+            - (BRIGHT_)YELLOW
+            - (BRIGHT_)BLUE
+            - (BRIGHT_)MAGENTA
+            - (BRIGHT_)CYAN
+            - (BRIGHT_)WHITE
         '''
         BLACK   = '30'
         RED     = '31'
@@ -119,15 +120,16 @@ class Style:
         '''
         Background Colors.
 
-        Available:
-        - (BRIGHT_)BLACK
-        - (BRIGHT_)RED
-        - (BRIGHT_)GREEN
-        - (BRIGHT_)YELLOW
-        - (BRIGHT_)BLUE
-        - (BRIGHT_)MAGENTA
-        - (BRIGHT_)CYAN
-        - (BRIGHT_)WHITE
+        Members:
+        
+            - (BRIGHT_)BLACK
+            - (BRIGHT_)RED
+            - (BRIGHT_)GREEN
+            - (BRIGHT_)YELLOW
+            - (BRIGHT_)BLUE
+            - (BRIGHT_)MAGENTA
+            - (BRIGHT_)CYAN
+            - (BRIGHT_)WHITE
         '''
         BLACK   = '40'
         RED     = '41'

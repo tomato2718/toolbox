@@ -14,5 +14,5 @@ setup(
     url = "", 
     packages = find_namespace_packages(include=['toolbox*']),
     include_package_data = True,
-    install_requires=req,
+    install_requires = req,
 )
